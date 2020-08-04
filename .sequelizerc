@@ -1,0 +1,11 @@
+//lidando com caminhos
+const path = require('path');
+
+//Arquivo necessário para enviar as credenciais de acesso
+module.exports = {
+    //Sempre se começa com dirname, raíz do diretório, (onde o arquivo sequelize está)
+    //Depois entra-se nas pastas por vírgulas e o nome correspondente
+    config: path.resolve(__dirname, 'src', 'config', 'database.js'),
+    'migrations-path': path.resolve(__dirname, 'src', 'database', 'migrations'),
+
+};
